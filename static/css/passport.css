@@ -1,0 +1,615 @@
+/* =========================================
+   AGENTSHIELD - PASSPORT.CSS
+   PART 1
+   Background + Window + Title Bar
+========================================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-family:Tahoma, sans-serif;
+
+    background-image:url("../images/background.png");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    background-attachment:fixed;
+
+    overflow-x:hidden;
+    overflow-y:auto;
+
+}
+
+/* Overlay */
+
+.overlay{
+
+    width:100%;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    padding:40px 0;
+
+    background:rgba(255,255,255,.05);
+
+}
+
+/* ==========================
+      MAIN WINDOW
+========================== */
+
+.window{
+
+    width:920px;
+    min-height:720px;
+
+    background:rgba(255,255,255,.82);
+
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    border-radius:30px;
+
+    border:2px solid rgba(255,255,255,.55);
+
+    box-shadow:
+        0 18px 50px rgba(0,0,0,.28),
+        0 0 25px rgba(255,105,180,.30);
+
+    overflow:hidden;
+
+    animation:popup .8s ease;
+
+}
+
+@keyframes popup{
+
+    from{
+        opacity:0;
+        transform:translateY(35px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+/* ==========================
+        TITLE BAR
+========================== */
+
+.title-bar{
+
+    height:60px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 22px;
+
+    background:linear-gradient(
+        90deg,
+        #ff9ccf,
+        #ff69b4,
+        #ff8fd3
+    );
+
+    border-bottom:1px solid rgba(255,255,255,.7);
+
+}
+
+/* Left Side */
+
+.title-left{
+
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+}
+
+.shield-icon{
+
+    width:28px;
+    height:28px;
+
+    object-fit:contain;
+
+}
+
+.title-left span{
+
+    font-family:'Audiowide', cursive;
+
+    color:white;
+
+    font-size:22px;
+
+    letter-spacing:1px;
+
+    text-shadow:1px 1px 2px rgba(0,0,0,.2);
+
+}
+
+/* Window Buttons */
+
+.window-buttons{
+
+    display:flex;
+    gap:10px;
+
+}
+
+.window-buttons button{
+
+    width:30px;
+    height:30px;
+
+    border:none;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    background:white;
+
+    color:#ff1493;
+
+    font-weight:bold;
+
+    transition:.3s;
+
+}
+
+.window-buttons button:hover{
+
+    transform:scale(1.08);
+
+}
+
+.window-buttons .close:hover{
+
+    background:#ff3b7d;
+    color:white;
+
+}
+
+/* ==========================
+      CONTENT AREA
+========================== */
+
+.content{
+
+    text-align:center;
+
+    padding:40px 55px;
+
+}
+/* =========================================
+   AGENTSHIELD - PASSPORT.CSS
+   PART 2
+   Robot + Title + Description
+========================================= */
+
+/* Robot */
+
+.robot{
+
+    width:120px;
+    height:120px;
+
+    object-fit:contain;
+
+    margin-top:15px;
+    margin-bottom:18px;
+
+    animation:float 3s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-10px);
+    }
+
+    100%{
+        transform:translateY(0);
+    }
+
+}
+
+/* ==========================
+      MAIN TITLE
+========================== */
+
+h1{
+
+    font-family:'Audiowide', cursive;
+
+    font-size:58px;
+
+    margin-top:10px;
+    margin-bottom:12px;
+
+    background:linear-gradient(
+        to bottom,
+        #ff5aad,
+        #c71585
+    );
+
+    -webkit-background-clip:text;
+    -webkit-text-fill-color:transparent;
+
+    text-shadow:2px 2px 3px rgba(255,20,147,0.25);
+
+    letter-spacing:2px;
+
+}
+
+/* ==========================
+      SUBTITLE
+========================== */
+
+h2{
+
+    font-size:24px;
+
+    color:#5B4B68;
+
+    font-weight:600;
+
+    margin-bottom:18px;
+
+}
+
+/* ==========================
+      DESCRIPTION
+========================== */
+
+.description{
+
+    width:82%;
+
+    margin:auto;
+
+    font-size:17px;
+
+    line-height:30px;
+
+    color:#555;
+
+    margin-bottom:35px;
+
+}
+/* =========================================
+   AGENTSHIELD - PASSPORT.CSS
+   PART 3
+   Form Box + Inputs
+========================================= */
+
+/* Form Box */
+
+.form-box{
+
+    width:82%;
+
+    margin:0 auto;
+
+    padding:35px;
+
+    background:rgba(255,255,255,.78);
+
+    backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);
+
+    border:2px solid rgba(255,255,255,.65);
+
+    border-radius:24px;
+
+    box-shadow:
+        0 8px 25px rgba(255,105,180,.18),
+        inset 0 2px 4px rgba(255,255,255,.8);
+
+}
+
+/* Form */
+
+.form-box form{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+/* Labels */
+
+.form-box label{
+
+    font-family:'Audiowide', cursive;
+
+    color:#ff1493;
+
+    font-size:16px;
+
+    margin-top:18px;
+
+    margin-bottom:8px;
+
+    text-align:left;
+
+}
+
+/* Input Fields */
+
+.form-box input{
+
+    width:100%;
+
+    height:52px;
+
+    padding:0 18px;
+
+    border:2px solid #ffd0e8;
+
+    border-radius:16px;
+
+    outline:none;
+
+    font-size:16px;
+
+    color:#444;
+
+    background:rgba(255,255,255,.95);
+
+    transition:.3s ease;
+
+}
+
+/* Placeholder */
+
+.form-box input::placeholder{
+
+    color:#999;
+
+}
+
+/* Focus Effect */
+
+.form-box input:focus{
+
+    border-color:#ff69b4;
+
+    box-shadow:
+        0 0 12px rgba(255,105,180,.25);
+
+}
+/* =========================================
+   AGENTSHIELD - PASSPORT.CSS
+   PART 4
+   Button + Status Bar + Responsive
+========================================= */
+
+/* ==========================
+      REGISTER BUTTON
+========================== */
+
+.register-btn{
+
+    width:100%;
+
+    height:60px;
+
+    margin-top:30px;
+
+    border:none;
+
+    border-radius:35px;
+
+    cursor:pointer;
+
+    font-family:'Audiowide', cursive;
+
+    font-size:20px;
+
+    color:white;
+
+    background:linear-gradient(
+        to bottom,
+        #ffc6e5,
+        #ff8fc9,
+        #ff5aad,
+        #ff1493
+    );
+
+    box-shadow:
+        0 8px 18px rgba(255,20,147,.35),
+        inset 0 2px 3px rgba(255,255,255,.8);
+
+    transition:.3s ease;
+
+}
+
+.register-btn:hover{
+
+    transform:translateY(-3px) scale(1.02);
+
+    background:linear-gradient(
+        to bottom,
+        #ffd6ed,
+        #ff9fd2,
+        #ff69b4,
+        #ff1493
+    );
+
+    box-shadow:
+        0 12px 24px rgba(255,20,147,.45);
+
+}
+
+.register-btn:active{
+
+    transform:scale(.98);
+
+}
+
+/* ==========================
+      STATUS BAR
+========================== */
+
+.status-bar{
+
+    width:100%;
+
+    margin-top:35px;
+
+    padding:15px 25px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    background:rgba(255,255,255,.70);
+
+    border-top:1px solid rgba(255,255,255,.8);
+
+    font-size:15px;
+
+    color:#555;
+
+}
+
+.online{
+
+    color:#00b050;
+
+    font-weight:bold;
+
+}
+
+/* ==========================
+      RESPONSIVE
+========================== */
+
+@media (max-width:1000px){
+
+    .window{
+
+        width:95%;
+
+    }
+
+    .content{
+
+        padding:30px;
+
+    }
+
+    .form-box{
+
+        width:95%;
+
+        padding:25px;
+
+    }
+
+    h1{
+
+        font-size:46px;
+
+    }
+
+    h2{
+
+        font-size:20px;
+
+    }
+
+    .description{
+
+        width:95%;
+
+        font-size:15px;
+
+    }
+
+}
+
+@media (max-width:650px){
+
+    .robot{
+
+        width:90px;
+        height:90px;
+
+    }
+
+    h1{
+
+        font-size:36px;
+
+    }
+
+    .form-box{
+
+        padding:20px;
+
+    }
+
+    .form-box label{
+
+        font-size:14px;
+
+    }
+
+    .form-box input{
+
+        height:48px;
+
+        font-size:15px;
+
+    }
+
+    .register-btn{
+
+        height:55px;
+
+        font-size:17px;
+
+    }
+
+    .window-buttons button{
+
+        width:26px;
+        height:26px;
+
+    }
+
+}
