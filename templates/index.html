@@ -14,66 +14,136 @@
 
 <body>
 
-<div class="desktop">
-
-    <!-- Window -->
-
     <div class="window">
 
-        <!-- Title Bar -->
+        <!-- ========================= -->
+        <!-- Windows XP Title Bar -->
+        <!-- ========================= -->
 
         <div class="title-bar">
 
             <div class="title-left">
 
-                🛡 AgentShield Security Center
+                <img src="{{ url_for('static', filename='images/robot.jpeg') }}"
+                    alt="Robot">
+
+                <span>AgentShield Security Center</span>
 
             </div>
 
             <div class="title-right">
 
-                <button>-</button>
-                <button>□</button>
-                <button>X</button>
+                <button class="xp-btn minimize">−</button>
+
+                <button class="xp-btn maximize">□</button>
+
+                <button class="xp-btn close">✕</button>
 
             </div>
 
         </div>
 
+        <!-- ========================= -->
         <!-- Main Content -->
+        <!-- ========================= -->
 
         <div class="content">
 
-            <div class="logo">
+            <!-- Robot Logo -->
 
-                🤖
+            <img class="robot-logo"
+                src="{{ url_for('static', filename='images/robot.png') }}"
+                alt="Robot Logo">
 
-            </div>
+            <!-- Project Name -->
 
-            <h1>AgentShield</h1>
+            <h1>
 
-            <h2>Identity & Permission Infrastructure for AI Agents</h2>
+                <span class="agent-text">Agent</span><span class="shield-text">Shield</span>
+
+            </h1>
+
+            <!-- Subtitle -->
+
+            <h2>
+
+                Identity & Permission Infrastructure for AI Agents
+
+            </h2>
+
+            <!-- Description -->
 
             <p class="description">
 
                 Securely verify AI agents before allowing them to browse,
-                purchase, access information or perform actions online.
+                purchase, access information, or perform sensitive actions online.
 
             </p>
 
+            <!-- Features Heading -->
+
+            <h3 class="feature-title">
+
+                System Features
+
+            </h3>
+
+            <!-- ========================= -->
+            <!-- Features -->
+            <!-- ========================= -->
+
             <div class="feature-box">
 
-                <div>✔ AI Identity Verification</div>
+                <div class="feature">
 
-                <div>✔ Permission Management</div>
+                    <img src="{{ url_for('static', filename='images/id.png') }}"
+                        alt="Identity">
 
-                <div>✔ Trust Score</div>
+                    <span>AI Identity Verification</span>
 
-                <div>✔ Activity Logs</div>
+                </div>
 
-                <div>✔ Gemini AI Integration</div>
+                <div class="feature">
+
+                    <img src="{{ url_for('static', filename='images/permission.png') }}"
+                        alt="Permissions">
+
+                    <span>Permission Management</span>
+
+                </div>
+
+                <div class="feature">
+
+                    <img src="{{ url_for('static', filename='images/trust.png') }}"
+                        alt="Trust">
+
+                    <span>Trust Score Monitoring</span>
+
+                </div>
+
+                <div class="feature">
+
+                    <img src="{{ url_for('static', filename='images/logs.png') }}"
+                        alt="Logs">
+
+                    <span>Activity Logging</span>
+
+                </div>
+
+                <div class="feature">
+
+                    <img src="{{ url_for('static', filename='images/gemini.png') }}"
+                        alt="Gemini">
+
+                    <span>Gemini AI Integration</span>
+
+                </div>
 
             </div>
+
+            <!-- ========================= -->
+            <!-- Launch Button -->
+            <!-- ========================= -->
 
             <form action="/dashboard" method="POST">
 
@@ -87,21 +157,29 @@
 
         </div>
 
+        <!-- ========================= -->
         <!-- Status Bar -->
+        <!-- ========================= -->
 
         <div class="status-bar">
 
-            <span>🟢 Connected to AgentShield Network</span>
+            <div>
 
-            <span>Version 1.0</span>
+                🟢 <strong>System Status:</strong> ONLINE
+
+            </div>
+
+            <div>
+
+                AgentShield v1.0
+
+            </div>
 
         </div>
 
     </div>
 
-</div>
-
-<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
 
 </body>
 
