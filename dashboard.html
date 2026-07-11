@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgentShield Dashboard</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css') }}">
+
+</head>
+
+<body>
+
+<div class="overlay">
+
+<div class="window">
+
+    <!-- Title Bar -->
+
+    <div class="title-bar">
+
+        <div class="title-left">
+
+            <img src="{{ url_for('static', filename='images/shield.png') }}" class="shield-icon">
+
+            <span>AgentShield Dashboard</span>
+
+        </div>
+
+        <div class="window-buttons">
+
+            <button>─</button>
+
+            <button>□</button>
+
+            <button class="close">✕</button>
+
+        </div>
+
+    </div>
+
+    <!-- Main Content -->
+
+    <div class="content">
+
+        <img src="{{ url_for('static', filename='images/robot.png') }}" class="robot">
+
+        <h1>AgentShield Dashboard</h1>
+
+        <h2>AI Agent Management</h2>
+
+        <p class="description">
+
+            Manage your AI agents, verify permissions and monitor activities securely using AgentShield.
+
+        </p>
+
+        <!-- Dashboard Panel -->
+
+        <div class="dashboard-box">
+
+            <button class="dashboard-btn">
+
+                <img src="{{ url_for('static', filename='images/id.png') }}">
+
+                <span>Register Agent</span>
+
+            </button>
+
+            <button class="dashboard-btn">
+
+                <img src="{{ url_for('static', filename='images/permission.png') }}">
+
+                <span>View Permissions</span>
+
+            </button>
+
+            <button class="dashboard-btn">
+
+                <img src="{{ url_for('static', filename='images/logs.png') }}">
+
+                <span>Activity Logs</span>
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Status Bar -->
+
+    <div class="status-bar">
+
+        <div>
+
+            System Status :
+            <span class="online">🟢 Active</span>
+
+        </div>
+
+        <div>
+
+            AgentShield Security Center
+
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/dashboard.js') }}"></script>
+
+</body>
+
+</html>
