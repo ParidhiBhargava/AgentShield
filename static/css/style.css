@@ -1,6 +1,7 @@
-/* ===========================
-   AGENTSHIELD - Y2K STYLE
-   =========================== */
+/* ==========================================
+   AgentShield - Windows XP Theme
+   Part 1
+========================================== */
 
 *{
     margin:0;
@@ -9,50 +10,61 @@
 }
 
 body{
-    background:linear-gradient(to bottom,#1e90ff,#87cefa);
-    font-family:Tahoma,Verdana,sans-serif;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
-    overflow:hidden;
-}
 
-/* Desktop */
-
-.desktop{
-    width:100%;
-    height:100%;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
-
-/* Window */
-
-.window{
-
-    width:850px;
+    font-family:"Trebuchet MS", Tahoma, Verdana, Arial, sans-serif;
 
     background:#ECE9D8;
 
-    border:3px solid #0A246A;
+    min-height:100vh;
 
-    border-radius:8px;
+    display:flex;
 
-    box-shadow:12px 12px 30px rgba(0,0,0,.45);
+    justify-content:center;
 
-    overflow:hidden;
+    align-items:center;
+
+    padding:30px;
 
 }
 
-/* Title Bar */
+
+/* ===========================
+   Main Window
+=========================== */
+
+.window{
+
+    width:900px;
+
+    background:#ECE9D8;
+
+    border:2px solid #0A4BAF;
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.35);
+
+}
+
+
+/* ===========================
+   Title Bar
+=========================== */
 
 .title-bar{
 
-    background:linear-gradient(to right,#0A246A,#3B7BD6);
+    height:40px;
 
-    color:white;
+    background:
+    linear-gradient(
+        to bottom,
+        #78B7FF 0%,
+        #2F89F6 45%,
+        #0057D8 100%
+    );
 
     display:flex;
 
@@ -60,195 +72,394 @@ body{
 
     align-items:center;
 
-    padding:10px 15px;
+    padding:0 10px;
+
+    color:white;
 
     font-weight:bold;
 
-    font-size:16px;
+    user-select:none;
 
 }
 
-/* Window Buttons */
+.title-left{
 
-.title-right button{
+    display:flex;
 
-    width:28px;
+    align-items:center;
 
-    height:24px;
+    gap:8px;
 
-    margin-left:5px;
+}
 
-    border:1px solid #333;
+.title-left img{
 
-    background:#D4D0C8;
+    width:22px;
+
+    height:22px;
+
+    object-fit:cover;
+
+}
+
+.title-left span{
+
+    font-size:15px;
+
+    letter-spacing:.3px;
+
+}
+
+
+/* ===========================
+   XP Buttons
+=========================== */
+
+.title-right{
+
+    display:flex;
+
+    gap:5px;
+
+}
+
+.xp-btn{
+
+    width:24px;
+
+    height:22px;
+
+    border-radius:4px;
+
+    border:1px solid #194F9E;
+
+    color:white;
+
+    font-weight:bold;
 
     cursor:pointer;
 
+    transition:.2s;
+
+}
+
+.minimize,
+.maximize{
+
+    background:
+    linear-gradient(
+        to bottom,
+        #7FC8FF,
+        #1E7AF2
+    );
+
+}
+
+.close{
+
+    background:
+    linear-gradient(
+        to bottom,
+        #FF8A8A,
+        #D80000
+    );
+
+}
+
+.xp-btn:hover{
+
+    filter:brightness(1.08);
+
+}
+
+
+/* ===========================
+   Content
+=========================== */
+
+.content{
+
+    padding:35px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:center;
+
+}
+
+
+/* ===========================
+   Robot Logo
+=========================== */
+
+.robot-logo{
+
+    width:95px;
+
+    margin-bottom:18px;
+
+    animation:float 3s ease-in-out infinite;
+
+}
+
+
+/* ===========================
+   Main Heading
+=========================== */
+
+h1{
+
+    font-size:52px;
+
+    margin-bottom:10px;
+
     font-weight:bold;
 
 }
 
-.title-right button:hover{
+.agent-text{
 
-    background:white;
+    color:#222;
 
 }
 
-/* Main Content */
+.shield-text{
 
-.content{
+    color:#0057D8;
 
-    padding:45px;
+}
+
+
+/* ===========================
+   Subtitle
+=========================== */
+
+h2{
+
+    color:#555;
+
+    font-size:20px;
+
+    font-weight:normal;
+
+    margin-bottom:15px;
 
     text-align:center;
 
 }
 
-/* Robot */
 
-.logo{
-
-    font-size:75px;
-
-    margin-bottom:10px;
-
-}
-
-/* Heading */
-
-h1{
-
-    font-size:48px;
-
-    color:#003399;
-
-    margin-bottom:10px;
-
-    text-shadow:1px 1px white;
-
-}
-
-h2{
-
-    color:#444;
-
-    font-weight:normal;
-
-    margin-bottom:20px;
-
-}
-
-/* Description */
+/* ===========================
+   Description
+=========================== */
 
 .description{
 
-    color:#555;
+    max-width:700px;
 
-    line-height:1.6;
+    text-align:center;
 
-    margin-bottom:30px;
-
-    font-size:17px;
-
-}
-
-/* Feature Box */
-
-.feature-box{
-
-    width:80%;
-
-    margin:auto;
-
-    background:white;
-
-    border:2px inset gray;
-
-    padding:20px;
-
-    text-align:left;
-
-    margin-bottom:35px;
-
-}
-
-.feature-box div{
-
-    padding:8px;
+    color:#444;
 
     font-size:16px;
 
-    border-bottom:1px solid #ddd;
+    line-height:1.7;
+
+    margin-bottom:30px;
 
 }
 
-.feature-box div:last-child{
 
-    border-bottom:none;
+/* ===========================
+   Feature Title
+=========================== */
+
+.feature-title{
+
+    color:#0057D8;
+
+    font-size:24px;
+
+    margin-bottom:18px;
+
+    text-decoration:underline;
 
 }
 
-/* Button */
+
+/* ===========================
+   Feature Box
+=========================== */
+
+.feature-box{
+
+    width:100%;
+
+    max-width:620px;
+
+    background:white;
+
+    border:2px solid #B5B5B5;
+
+    border-radius:10px;
+
+    padding:18px;
+
+    box-shadow:
+        inset 0 0 6px rgba(0,0,0,.12);
+
+}
+
+
+/* ===========================
+   Individual Feature
+=========================== */
+
+.feature{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+    padding:12px;
+
+    border-radius:8px;
+
+    transition:.25s;
+
+}
+
+.feature:hover{
+
+    background:#F0F7FF;
+
+}
+
+.feature img{
+
+    width:28px;
+
+    height:28px;
+
+}
+
+.feature span{
+
+    font-size:17px;
+
+    color:#333;
+
+    font-weight:600;
+
+}
+/* ==========================================
+   AgentShield - Windows XP Theme
+   Part 2
+========================================== */
+
+
+/* ===========================
+   Launch Button
+=========================== */
 
 .launch-btn{
 
-    background:linear-gradient(#6FC6FF,#1D62C7);
+    margin-top:30px;
 
-    color:white;
+    padding:15px 38px;
 
     font-size:18px;
 
+    font-family:"Trebuchet MS",Tahoma,Verdana,sans-serif;
+
     font-weight:bold;
 
-    padding:15px 35px;
-
-    border:2px outset white;
+    color:white;
 
     cursor:pointer;
 
-    transition:.3s;
+    border:2px solid #0B4FAE;
+
+    border-radius:6px;
+
+    background:
+    linear-gradient(
+        to bottom,
+        #7FC8FF 0%,
+        #3D91FF 45%,
+        #0064E6 100%
+    );
+
+    box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.6),
+        0 4px 8px rgba(0,0,0,.25);
+
+    transition:.25s;
 
 }
 
 .launch-btn:hover{
 
-    transform:scale(1.05);
+    transform:translateY(-2px);
 
-    background:linear-gradient(#89D4FF,#3578E5);
+    background:
+    linear-gradient(
+        to bottom,
+        #98D5FF,
+        #4FA1FF,
+        #1475F2
+    );
 
 }
 
-/* Status Bar */
+.launch-btn:active{
+
+    transform:translateY(1px);
+
+    box-shadow:
+        inset 0 2px 5px rgba(0,0,0,.35);
+
+}
+
+
+/* ===========================
+   Status Bar
+=========================== */
 
 .status-bar{
 
-    background:#D4D0C8;
+    background:#ECE9D8;
 
-    border-top:2px solid gray;
+    border-top:1px solid #A5A5A5;
 
     display:flex;
 
     justify-content:space-between;
 
-    padding:10px 20px;
+    align-items:center;
 
-    font-size:14px;
+    padding:8px 16px;
 
-}
+    font-size:13px;
 
-/* Small Animation */
-
-.logo{
-
-    animation:float 2s ease-in-out infinite;
+    color:#333;
 
 }
+
+
+/* ===========================
+   Floating Robot
+=========================== */
 
 @keyframes float{
 
     0%{
 
-        transform:translateY(0px);
+        transform:translateY(0);
 
     }
 
@@ -260,8 +471,290 @@ h2{
 
     100%{
 
-        transform:translateY(0px);
+        transform:translateY(0);
 
     }
+
+}
+
+
+/* ===========================
+   Fade In
+=========================== */
+
+.window{
+
+    animation:fadeIn .7s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+
+/* ===========================
+   Feature Hover Animation
+=========================== */
+
+.feature img{
+
+    transition:.25s;
+
+}
+
+.feature:hover img{
+
+    transform:scale(1.12);
+
+}
+
+
+/* ===========================
+   Button Focus
+=========================== */
+
+button:focus{
+
+    outline:none;
+
+}
+
+
+/* ===========================
+   Selection Color
+=========================== */
+
+::selection{
+
+    background:#2E86FF;
+
+    color:white;
+
+}
+
+
+/* ===========================
+   Scrollbar
+=========================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#ECE9D8;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#7DAEFF;
+
+    border-radius:10px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#4D8FFF;
+
+}
+
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width:950px){
+
+.window{
+
+    width:95%;
+
+}
+
+.content{
+
+    padding:25px;
+
+}
+
+h1{
+
+    font-size:42px;
+
+}
+
+h2{
+
+    font-size:18px;
+
+}
+
+.description{
+
+    font-size:15px;
+
+}
+
+.feature-box{
+
+    max-width:100%;
+
+}
+
+}
+
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:650px){
+
+.title-left span{
+
+    font-size:13px;
+
+}
+
+.robot-logo{
+
+    width:75px;
+
+}
+
+h1{
+
+    font-size:34px;
+
+}
+
+h2{
+
+    font-size:16px;
+
+}
+
+.feature{
+
+    padding:10px;
+
+    gap:10px;
+
+}
+
+.feature img{
+
+    width:24px;
+
+    height:24px;
+
+}
+
+.feature span{
+
+    font-size:15px;
+
+}
+
+.launch-btn{
+
+    width:100%;
+
+    font-size:17px;
+
+}
+
+.status-bar{
+
+    flex-direction:column;
+
+    gap:5px;
+
+    text-align:center;
+
+}
+
+}
+
+
+/* ===========================
+   Extra XP Touches
+=========================== */
+
+.feature-box{
+
+    background:
+    linear-gradient(
+        to bottom,
+        #FFFFFF,
+        #F9F9F9
+    );
+
+}
+
+.window{
+
+    border-top:1px solid #98C8FF;
+
+}
+
+.title-bar{
+
+    box-shadow:
+
+    inset 0 1px 0 rgba(255,255,255,.5);
+
+}
+
+.title-left img{
+
+    border-radius:4px;
+
+}
+
+.feature-title{
+
+    letter-spacing:.4px;
+
+}
+
+.description{
+
+    color:#4A4A4A;
+
+}
+/* ===========================
+   Maximize Window
+=========================== */
+
+.maximize-window{
+
+    width:96%;
+
+    height:95vh;
+
+    transition:.35s;
 
 }
