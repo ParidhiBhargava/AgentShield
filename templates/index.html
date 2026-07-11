@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgentShield</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=Tahoma&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+<div class="overlay">
+
+    <!-- Main Window -->
+
+    <div class="window">
+
+        <!-- Title Bar -->
+
+        <div class="title-bar">
+
+            <div class="title-left">
+
+                <img src="{{ url_for('static', filename='images/shield.png') }}" class="shield-icon">
+
+                <span>AgentShield</span>
+
+            </div>
+
+            <div class="window-buttons">
+
+                <button>─</button>
+
+                <button>□</button>
+
+                <button class="close">✕</button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- Main Content -->
+
+        <div class="content">
+
+            <img src="{{ url_for('static', filename='images/robot.png') }}" class="robot">
+
+            <h1>AgentShield</h1>
+
+            <h2>Identity & Permission Infrastructure for AI Agents</h2>
+
+            <p class="description">
+
+                Securely verify AI agents before allowing them to browse,
+
+                purchase, access information or perform actions online.
+
+            </p>
+
+
+
+            <h3>System Features</h3>
+
+
+
+            <div class="feature-box">
+
+                <div class="feature">
+
+                    <img src="{{ url_for('static', filename='images/id.png') }}">
+
+                    <span>AI Identity Verification</span>
+
+                </div>
+
+
+
+                <div class="feature">
+
+                    <img src="{{ url_for('static', filename='images/permission.png') }}">
+
+                    <span>Permission Management</span>
+
+                </div>
+
+
+
+                <div class="feature">
+
+                    <img src="{{ url_for('static', filename='images/trust.png') }}">
+
+                    <span>Trust Score</span>
+
+                </div>
+
+
+
+                <div class="feature">
+
+                    <img src="{{ url_for('static', filename='images/logs.png') }}">
+
+                    <span>Activity Logs</span>
+
+                </div>
+
+
+
+                <div class="feature">
+
+                    <img src="{{ url_for('static', filename='images/gemini.png') }}">
+
+                    <span>Gemini AI Integration</span>
+
+                </div>
+
+            </div>
+
+
+
+            <form action="/dashboard" method="POST">
+
+                <button class="launch-btn" id="launchBtn">
+
+                    🚀 Launch AgentShield
+
+                </button>
+
+            </form>
+
+        </div>
+
+
+
+        <!-- Status Bar -->
+
+        <div class="status-bar">
+
+            <div>
+
+                System Status :
+
+                <span class="online">ONLINE</span>
+
+            </div>
+
+
+
+            <div>
+
+                Protected by AgentShield
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
