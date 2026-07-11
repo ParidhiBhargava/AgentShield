@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AgentShield</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="desktop">
+
+    <!-- Window -->
+
+    <div class="window">
+
+        <!-- Title Bar -->
+
+        <div class="title-bar">
+
+            <div class="title-left">
+
+                🛡 AgentShield Security Center
+
+            </div>
+
+            <div class="title-right">
+
+                <button>-</button>
+                <button>□</button>
+                <button>X</button>
+
+            </div>
+
+        </div>
+
+        <!-- Main Content -->
+
+        <div class="content">
+
+            <div class="logo">
+
+                🤖
+
+            </div>
+
+            <h1>AgentShield</h1>
+
+            <h2>Identity & Permission Infrastructure for AI Agents</h2>
+
+            <p class="description">
+
+                Securely verify AI agents before allowing them to browse,
+                purchase, access information or perform actions online.
+
+            </p>
+
+            <div class="feature-box">
+
+                <div>✔ AI Identity Verification</div>
+
+                <div>✔ Permission Management</div>
+
+                <div>✔ Trust Score</div>
+
+                <div>✔ Activity Logs</div>
+
+                <div>✔ Gemini AI Integration</div>
+
+            </div>
+
+            <form action="/dashboard" method="POST">
+
+                <button class="launch-btn">
+
+                    🚀 Launch AgentShield
+
+                </button>
+
+            </form>
+
+        </div>
+
+        <!-- Status Bar -->
+
+        <div class="status-bar">
+
+            <span>🟢 Connected to AgentShield Network</span>
+
+            <span>Version 1.0</span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,267 @@
+/* ===========================
+   AGENTSHIELD - Y2K STYLE
+   =========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:linear-gradient(to bottom,#1e90ff,#87cefa);
+    font-family:Tahoma,Verdana,sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    overflow:hidden;
+}
+
+/* Desktop */
+
+.desktop{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* Window */
+
+.window{
+
+    width:850px;
+
+    background:#ECE9D8;
+
+    border:3px solid #0A246A;
+
+    border-radius:8px;
+
+    box-shadow:12px 12px 30px rgba(0,0,0,.45);
+
+    overflow:hidden;
+
+}
+
+/* Title Bar */
+
+.title-bar{
+
+    background:linear-gradient(to right,#0A246A,#3B7BD6);
+
+    color:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:10px 15px;
+
+    font-weight:bold;
+
+    font-size:16px;
+
+}
+
+/* Window Buttons */
+
+.title-right button{
+
+    width:28px;
+
+    height:24px;
+
+    margin-left:5px;
+
+    border:1px solid #333;
+
+    background:#D4D0C8;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+}
+
+.title-right button:hover{
+
+    background:white;
+
+}
+
+/* Main Content */
+
+.content{
+
+    padding:45px;
+
+    text-align:center;
+
+}
+
+/* Robot */
+
+.logo{
+
+    font-size:75px;
+
+    margin-bottom:10px;
+
+}
+
+/* Heading */
+
+h1{
+
+    font-size:48px;
+
+    color:#003399;
+
+    margin-bottom:10px;
+
+    text-shadow:1px 1px white;
+
+}
+
+h2{
+
+    color:#444;
+
+    font-weight:normal;
+
+    margin-bottom:20px;
+
+}
+
+/* Description */
+
+.description{
+
+    color:#555;
+
+    line-height:1.6;
+
+    margin-bottom:30px;
+
+    font-size:17px;
+
+}
+
+/* Feature Box */
+
+.feature-box{
+
+    width:80%;
+
+    margin:auto;
+
+    background:white;
+
+    border:2px inset gray;
+
+    padding:20px;
+
+    text-align:left;
+
+    margin-bottom:35px;
+
+}
+
+.feature-box div{
+
+    padding:8px;
+
+    font-size:16px;
+
+    border-bottom:1px solid #ddd;
+
+}
+
+.feature-box div:last-child{
+
+    border-bottom:none;
+
+}
+
+/* Button */
+
+.launch-btn{
+
+    background:linear-gradient(#6FC6FF,#1D62C7);
+
+    color:white;
+
+    font-size:18px;
+
+    font-weight:bold;
+
+    padding:15px 35px;
+
+    border:2px outset white;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.launch-btn:hover{
+
+    transform:scale(1.05);
+
+    background:linear-gradient(#89D4FF,#3578E5);
+
+}
+
+/* Status Bar */
+
+.status-bar{
+
+    background:#D4D0C8;
+
+    border-top:2px solid gray;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    padding:10px 20px;
+
+    font-size:14px;
+
+}
+
+/* Small Animation */
+
+.logo{
+
+    animation:float 2s ease-in-out infinite;
+
+}
+
+@keyframes float{
+
+    0%{
+
+        transform:translateY(0px);
+
+    }
+
+    50%{
+
+        transform:translateY(-8px);
+
+    }
+
+    100%{
+
+        transform:translateY(0px);
+
+    }
+
+}
