@@ -1,36 +1,76 @@
-// ================================
-// AgentShield - Landing Page
-// ================================
+// ==========================================
+// AgentShield - Landing Page Script
+// Windows XP Style
+// ==========================================
 
 document.addEventListener("DOMContentLoaded", () => {
 
     const launchBtn = document.querySelector(".launch-btn");
-    const statusBar = document.querySelector(".status-bar span");
+    const windowBox = document.querySelector(".window");
 
-    // Button hover text
-    launchBtn.addEventListener("mouseenter", () => {
-        launchBtn.textContent = "🔐 Initializing...";
-    });
+    // ===========================
+    // Launch Button Animation
+    // ===========================
 
-    launchBtn.addEventListener("mouseleave", () => {
-        launchBtn.textContent = "🚀 Launch AgentShield";
-    });
+    if (launchBtn) {
 
-    // Loading effect when button is clicked
-    launchBtn.addEventListener("click", function () {
+        launchBtn.addEventListener("click", function () {
 
-        statusBar.innerHTML = "🟡 Connecting to AgentShield Network...";
+            launchBtn.innerHTML = "⏳ Initializing AgentShield...";
 
-        launchBtn.innerHTML = "⏳ Loading...";
+            launchBtn.disabled = true;
 
-        launchBtn.disabled = true;
+            launchBtn.style.cursor = "wait";
 
-        // The form will continue submitting to Flask
-        // after a short delay.
-        setTimeout(() => {
-            launchBtn.form.submit();
-        }, 1200);
+            windowBox.style.opacity = "0.95";
 
-    });
+            // Form submits automatically after animation
+            // Flask will redirect to /dashboard
+
+        });
+
+    }
+
+    // ===========================
+    // XP Window Buttons
+    // ===========================
+
+    const minimize = document.querySelector(".minimize");
+    const maximize = document.querySelector(".maximize");
+    const closeBtn = document.querySelector(".close");
+
+    if (minimize) {
+
+        minimize.addEventListener("click", () => {
+
+            alert("Minimize is disabled in the web version.");
+
+        });
+
+    }
+
+    if (maximize) {
+
+        maximize.addEventListener("click", () => {
+
+            windowBox.classList.toggle("maximize-window");
+
+        });
+
+    }
+
+    if (closeBtn) {
+
+        closeBtn.addEventListener("click", () => {
+
+            if (confirm("Close AgentShield?")) {
+
+                window.location.href = "/";
+
+            }
+
+        });
+
+    }
 
 });
