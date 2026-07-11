@@ -1,760 +1,703 @@
-/* ==========================================
-   AgentShield - Windows XP Theme
-   Part 1
-========================================== */
+/* =========================================
+   AGENTSHIELD - STYLE.CSS
+   PART 1
+========================================= */
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-body{
-
-    font-family:"Trebuchet MS", Tahoma, Verdana, Arial, sans-serif;
-
-    background:#ECE9D8;
-
-    min-height:100vh;
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    padding:30px;
-
+html {
+    scroll-behavior: smooth;
 }
 
+body {
+    width: 100%;
+    height: 100vh;
 
-/* ===========================
-   Main Window
-=========================== */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
-.window{
+    font-family: Tahoma, sans-serif;
 
-    width:900px;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 
-    background:#ECE9D8;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
 
-    border:2px solid #0A4BAF;
+/* Overlay */
 
-    border-radius:12px;
+.overlay {
+    width: 100%;
+    height: 100vh;
 
-    overflow:hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: rgba(255,255,255,0.05);
+}
+
+/* =========================================
+   MAIN WINDOW
+========================================= */
+
+.window {
+
+    width: 920px;
+    min-height: 700px;
+
+    background: rgba(255,255,255,0.82);
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    border-radius: 30px;
+
+    border: 2px solid rgba(255,255,255,0.55);
 
     box-shadow:
-        0 18px 40px rgba(0,0,0,.35);
+        0 18px 50px rgba(0,0,0,0.28),
+        0 0 25px rgba(255,105,180,0.30);
+
+    overflow: hidden;
+
+    animation: popup 0.8s ease;
+}
+
+/* Window Animation */
+
+@keyframes popup {
+
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 
 }
 
+/* =========================================
+   TITLE BAR
+========================================= */
 
-/* ===========================
-   Title Bar
-=========================== */
+.title-bar {
 
-.title-bar{
+    width: 100%;
+    height: 60px;
 
-    height:40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-    background:
-    linear-gradient(
-        to bottom,
-        #78B7FF 0%,
-        #2F89F6 45%,
-        #0057D8 100%
+    padding: 0 22px;
+
+    background: linear-gradient(
+        90deg,
+        #ff8cc6,
+        #ff69b4,
+        #ff8fd3
     );
 
-    display:flex;
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+}
 
-    justify-content:space-between;
+/* Left Side */
 
-    align-items:center;
+.title-left {
 
-    padding:0 10px;
-
-    color:white;
-
-    font-weight:bold;
-
-    user-select:none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
 
 }
 
-.title-left{
+.shield-icon {
 
-    display:flex;
-
-    align-items:center;
-
-    gap:8px;
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
 
 }
 
-.title-left img{
+.title-left span {
 
-    width:22px;
+    font-family: 'Audiowide', cursive;
 
-    height:22px;
+    color: white;
 
-    object-fit:cover;
+    font-size: 24px;
 
-}
+    letter-spacing: 1px;
 
-.title-left span{
-
-    font-size:15px;
-
-    letter-spacing:.3px;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.18);
 
 }
 
+/* =========================================
+   WINDOW BUTTONS
+========================================= */
 
-/* ===========================
-   XP Buttons
-=========================== */
+.window-buttons {
 
-.title-right{
-
-    display:flex;
-
-    gap:5px;
+    display: flex;
+    gap: 10px;
 
 }
 
-.xp-btn{
+.window-buttons button {
 
-    width:24px;
+    width: 32px;
+    height: 32px;
 
-    height:22px;
+    border: none;
+    outline: none;
 
-    border-radius:4px;
+    border-radius: 10px;
 
-    border:1px solid #194F9E;
+    cursor: pointer;
 
-    color:white;
+    background: rgba(255,255,255,0.9);
 
-    font-weight:bold;
+    color: #ff1493;
 
-    cursor:pointer;
+    font-size: 16px;
 
-    transition:.2s;
+    font-weight: bold;
+
+    transition: 0.3s;
 
 }
 
-.minimize,
-.maximize{
+.window-buttons button:hover {
 
-    background:
-    linear-gradient(
+    background: white;
+
+    transform: scale(1.08);
+
+}
+
+.window-buttons .close:hover {
+
+    background: #ff3c7d;
+
+    color: white;
+
+}
+
+/* =========================================
+   CONTENT AREA
+========================================= */
+
+.content {
+
+    width: 100%;
+
+    padding: 40px 60px;
+
+    text-align: center;
+
+}
+/* =========================================
+   AGENTSHIELD - STYLE.CSS
+   PART 2
+   ROBOT + TITLE + DESCRIPTION
+========================================= */
+
+/* Robot */
+
+.robot {
+
+    width: 120px;
+    height: 120px;
+
+    object-fit: contain;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    animation: float 3s ease-in-out infinite;
+
+}
+
+@keyframes float {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+/* =========================================
+   MAIN TITLE
+========================================= */
+
+h1 {
+
+    font-family: 'Audiowide', cursive;
+
+    font-size: 62px;
+
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    background: linear-gradient(
         to bottom,
-        #7FC8FF,
-        #1E7AF2
+        #ffffff,
+        #ffd8ee,
+        #ff8cc6,
+        #ff1493
     );
 
-}
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
-.close{
+    letter-spacing: 2px;
 
-    background:
-    linear-gradient(
-        to bottom,
-        #FF8A8A,
-        #D80000
-    );
+    text-shadow: 2px 2px 3px rgba(255,20,147,0.25);
 
 }
 
-.xp-btn:hover{
+/* =========================================
+   SUBTITLE
+========================================= */
 
-    filter:brightness(1.08);
+h2 {
 
-}
+    font-size: 22px;
 
+    color: #5b4b68;
 
-/* ===========================
-   Content
-=========================== */
+    font-weight: 600;
 
-.content{
-
-    padding:35px;
-
-    display:flex;
-
-    flex-direction:column;
-
-    align-items:center;
+    margin-bottom: 18px;
 
 }
 
+/* =========================================
+   DESCRIPTION
+========================================= */
 
-/* ===========================
-   Robot Logo
-=========================== */
+.description {
 
-.robot-logo{
+    width: 80%;
 
-    width:95px;
+    margin: auto;
 
-    margin-bottom:18px;
+    font-size: 17px;
 
-    animation:float 3s ease-in-out infinite;
+    line-height: 30px;
 
-}
+    color: #555;
 
-
-/* ===========================
-   Main Heading
-=========================== */
-
-h1{
-
-    font-size:52px;
-
-    margin-bottom:10px;
-
-    font-weight:bold;
+    margin-bottom: 35px;
 
 }
 
-.agent-text{
+/* =========================================
+   FEATURES HEADING
+========================================= */
 
-    color:#222;
+h3 {
 
-}
+    font-family: 'Audiowide', cursive;
 
-.shield-text{
+    color: #ff1493;
 
-    color:#0057D8;
+    font-size: 28px;
 
-}
+    margin-bottom: 25px;
 
-
-/* ===========================
-   Subtitle
-=========================== */
-
-h2{
-
-    color:#555;
-
-    font-size:20px;
-
-    font-weight:normal;
-
-    margin-bottom:15px;
-
-    text-align:center;
+    text-shadow: 0 0 8px rgba(255,20,147,.25);
 
 }
+/* =========================================
+   AGENTSHIELD - STYLE.CSS
+   PART 3
+   FEATURE BOX
+========================================= */
 
+/* Feature Box */
 
-/* ===========================
-   Description
-=========================== */
+.feature-box {
 
-.description{
+    width: 82%;
 
-    max-width:700px;
+    margin: auto;
 
-    text-align:center;
+    background: rgba(255,255,255,0.82);
 
-    color:#444;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
 
-    font-size:16px;
+    border: 2px solid rgba(255,255,255,0.7);
 
-    line-height:1.7;
-
-    margin-bottom:30px;
-
-}
-
-
-/* ===========================
-   Feature Title
-=========================== */
-
-.feature-title{
-
-    color:#0057D8;
-
-    font-size:24px;
-
-    margin-bottom:18px;
-
-    text-decoration:underline;
-
-}
-
-
-/* ===========================
-   Feature Box
-=========================== */
-
-.feature-box{
-
-    width:100%;
-
-    max-width:620px;
-
-    background:white;
-
-    border:2px solid #B5B5B5;
-
-    border-radius:10px;
-
-    padding:18px;
+    border-radius: 22px;
 
     box-shadow:
-        inset 0 0 6px rgba(0,0,0,.12);
+        0 8px 25px rgba(255,105,180,0.20),
+        inset 0 2px 4px rgba(255,255,255,0.6);
+
+    overflow: hidden;
 
 }
 
+/* Each Feature Row */
+
+.feature {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding: 18px 20px;
+
+    border-bottom: 1px solid rgba(255,182,193,0.4);
+
+    transition: all .3s ease;
+
+}
+
+.feature:last-child {
+
+    border-bottom: none;
+
+}
+
+/* Hover */
+
+.feature:hover {
+
+    background: rgba(255,192,203,0.18);
+
+    transform: translateX(8px);
+
+}
+
+/* Icons */
+
+.feature img {
+
+    width: 38px;
+
+    height: 38px;
+
+    object-fit: contain;
+
+    transition: .3s;
+
+}
+
+.feature:hover img {
+
+    transform: scale(1.15) rotate(-8deg);
+
+}
+
+/* Text */
+
+.feature span {
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+    color: #444;
+
+    letter-spacing: .4px;
+
+}
+
+/* Fade Animation */
+
+.feature {
+
+    opacity: 0;
+
+    animation: fadeUp .8s forwards;
+
+}
+
+.feature:nth-child(1) {
+
+    animation-delay: .1s;
+
+}
+
+.feature:nth-child(2) {
+
+    animation-delay: .2s;
+
+}
+
+.feature:nth-child(3) {
+
+    animation-delay: .3s;
+
+}
+
+.feature:nth-child(4) {
+
+    animation-delay: .4s;
+
+}
+
+.feature:nth-child(5) {
+
+    animation-delay: .5s;
+
+}
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(20px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+/* =========================================
+   AGENTSHIELD - STYLE.CSS
+   PART 4
+   BUTTON + STATUS BAR + RESPONSIVE
+========================================= */
 
 /* ===========================
-   Individual Feature
+   LAUNCH BUTTON
 =========================== */
 
-.feature{
+.launch-btn {
 
-    display:flex;
+    margin-top: 35px;
 
-    align-items:center;
+    width: 330px;
+    height: 60px;
 
-    gap:15px;
+    border: none;
+    border-radius: 40px;
 
-    padding:12px;
+    cursor: pointer;
 
-    border-radius:8px;
+    font-family: 'Audiowide', cursive;
+    font-size: 21px;
+    color: white;
 
-    transition:.25s;
-
-}
-
-.feature:hover{
-
-    background:#F0F7FF;
-
-}
-
-.feature img{
-
-    width:28px;
-
-    height:28px;
-
-}
-
-.feature span{
-
-    font-size:17px;
-
-    color:#333;
-
-    font-weight:600;
-
-}
-/* ==========================================
-   AgentShield - Windows XP Theme
-   Part 2
-========================================== */
-
-
-/* ===========================
-   Launch Button
-=========================== */
-
-.launch-btn{
-
-    margin-top:30px;
-
-    padding:15px 38px;
-
-    font-size:18px;
-
-    font-family:"Trebuchet MS",Tahoma,Verdana,sans-serif;
-
-    font-weight:bold;
-
-    color:white;
-
-    cursor:pointer;
-
-    border:2px solid #0B4FAE;
-
-    border-radius:6px;
-
-    background:
-    linear-gradient(
+    background: linear-gradient(
         to bottom,
-        #7FC8FF 0%,
-        #3D91FF 45%,
-        #0064E6 100%
+        #ffb6d9,
+        #ff82c1,
+        #ff4ea1,
+        #ff1493
     );
 
     box-shadow:
-        inset 0 1px 0 rgba(255,255,255,.6),
-        0 4px 8px rgba(0,0,0,.25);
+        0 8px 18px rgba(255,20,147,0.35),
+        inset 0 2px 4px rgba(255,255,255,0.8);
 
-    transition:.25s;
-
-}
-
-.launch-btn:hover{
-
-    transform:translateY(-2px);
-
-    background:
-    linear-gradient(
-        to bottom,
-        #98D5FF,
-        #4FA1FF,
-        #1475F2
-    );
+    transition: all .3s ease;
 
 }
 
-.launch-btn:active{
+.launch-btn:hover {
 
-    transform:translateY(1px);
+    transform: translateY(-3px) scale(1.03);
 
     box-shadow:
-        inset 0 2px 5px rgba(0,0,0,.35);
+        0 12px 24px rgba(255,20,147,0.45);
 
 }
 
+.launch-btn:active {
 
-/* ===========================
-   Status Bar
-=========================== */
-
-.status-bar{
-
-    background:#ECE9D8;
-
-    border-top:1px solid #A5A5A5;
-
-    display:flex;
-
-    justify-content:space-between;
-
-    align-items:center;
-
-    padding:8px 16px;
-
-    font-size:13px;
-
-    color:#333;
+    transform: scale(.97);
 
 }
 
-
 /* ===========================
-   Floating Robot
+   STATUS BAR
 =========================== */
 
-@keyframes float{
+.status-bar {
 
-    0%{
+    width: 100%;
 
-        transform:translateY(0);
+    margin-top: 35px;
+
+    padding: 15px 25px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255,255,255,0.7);
+
+    border-top: 1px solid rgba(255,255,255,0.8);
+
+    font-size: 15px;
+
+    color: #555;
+
+}
+
+.online {
+
+    color: #00b050;
+
+    font-weight: bold;
+
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar {
+
+    width: 8px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #ffe8f3;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: #ff69b4;
+
+    border-radius: 20px;
+
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width:1000px){
+
+    .window{
+
+        width:95%;
 
     }
 
-    50%{
+    .content{
 
-        transform:translateY(-8px);
-
-    }
-
-    100%{
-
-        transform:translateY(0);
+        padding:30px;
 
     }
 
-}
+    .feature-box{
 
-
-/* ===========================
-   Fade In
-=========================== */
-
-.window{
-
-    animation:fadeIn .7s ease;
-
-}
-
-@keyframes fadeIn{
-
-    from{
-
-        opacity:0;
-
-        transform:translateY(20px);
+        width:95%;
 
     }
 
-    to{
+    h1{
 
-        opacity:1;
+        font-size:48px;
 
-        transform:translateY(0);
+    }
+
+    h2{
+
+        font-size:20px;
+
+    }
+
+    .description{
+
+        width:95%;
+
+        font-size:15px;
+
+    }
+
+    .launch-btn{
+
+        width:270px;
+
+        font-size:18px;
 
     }
 
 }
-
-
-/* ===========================
-   Feature Hover Animation
-=========================== */
-
-.feature img{
-
-    transition:.25s;
-
-}
-
-.feature:hover img{
-
-    transform:scale(1.12);
-
-}
-
-
-/* ===========================
-   Button Focus
-=========================== */
-
-button:focus{
-
-    outline:none;
-
-}
-
-
-/* ===========================
-   Selection Color
-=========================== */
-
-::selection{
-
-    background:#2E86FF;
-
-    color:white;
-
-}
-
-
-/* ===========================
-   Scrollbar
-=========================== */
-
-::-webkit-scrollbar{
-
-    width:10px;
-
-}
-
-::-webkit-scrollbar-track{
-
-    background:#ECE9D8;
-
-}
-
-::-webkit-scrollbar-thumb{
-
-    background:#7DAEFF;
-
-    border-radius:10px;
-
-}
-
-::-webkit-scrollbar-thumb:hover{
-
-    background:#4D8FFF;
-
-}
-
-
-/* ===========================
-   Responsive
-=========================== */
-
-@media (max-width:950px){
-
-.window{
-
-    width:95%;
-
-}
-
-.content{
-
-    padding:25px;
-
-}
-
-h1{
-
-    font-size:42px;
-
-}
-
-h2{
-
-    font-size:18px;
-
-}
-
-.description{
-
-    font-size:15px;
-
-}
-
-.feature-box{
-
-    max-width:100%;
-
-}
-
-}
-
-
-/* ===========================
-   Mobile
-=========================== */
 
 @media (max-width:650px){
 
-.title-left span{
+    .robot{
 
-    font-size:13px;
+        width:90px;
+        height:90px;
 
-}
+    }
 
-.robot-logo{
+    h1{
 
-    width:75px;
+        font-size:38px;
 
-}
+    }
 
-h1{
+    .feature{
 
-    font-size:34px;
+        padding:14px;
 
-}
+        gap:12px;
 
-h2{
+    }
 
-    font-size:16px;
+    .feature img{
 
-}
+        width:28px;
+        height:28px;
 
-.feature{
+    }
 
-    padding:10px;
+    .feature span{
 
-    gap:10px;
+        font-size:16px;
 
-}
+    }
 
-.feature img{
+    .window-buttons button{
 
-    width:24px;
+        width:26px;
+        height:26px;
 
-    height:24px;
-
-}
-
-.feature span{
-
-    font-size:15px;
-
-}
-
-.launch-btn{
-
-    width:100%;
-
-    font-size:17px;
-
-}
-
-.status-bar{
-
-    flex-direction:column;
-
-    gap:5px;
-
-    text-align:center;
-
-}
-
-}
-
-
-/* ===========================
-   Extra XP Touches
-=========================== */
-
-.feature-box{
-
-    background:
-    linear-gradient(
-        to bottom,
-        #FFFFFF,
-        #F9F9F9
-    );
-
-}
-
-.window{
-
-    border-top:1px solid #98C8FF;
-
-}
-
-.title-bar{
-
-    box-shadow:
-
-    inset 0 1px 0 rgba(255,255,255,.5);
-
-}
-
-.title-left img{
-
-    border-radius:4px;
-
-}
-
-.feature-title{
-
-    letter-spacing:.4px;
-
-}
-
-.description{
-
-    color:#4A4A4A;
-
-}
-/* ===========================
-   Maximize Window
-=========================== */
-
-.maximize-window{
-
-    width:96%;
-
-    height:95vh;
-
-    transition:.35s;
+    }
 
 }
